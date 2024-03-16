@@ -44,6 +44,7 @@ If you decide to use docker, after building the images, you can run both fronten
 4. Run at once:
    - `cd ..`
    - `sudo docker-compose up`
+   NOTE: docker-compose assumes both image tags to be 1.0.0!
 
 ## Contributors
 

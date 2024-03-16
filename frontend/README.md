@@ -27,7 +27,8 @@ NOTE: make sure to first start the backend!
 3. Build docker image
    - You can use: `sudo docker image build -t "geo-location-frontend:<tag>" .`
    - Or use the utility script `dockerize.sh`
-4. Run the docker image: `sudo docker run -d --network geo-loc-network -p 3000:80 geo-location-frontend:<tag>`
+4. Create network: `sudo docker network create geo-loc-network`
+5. Run the docker image: `sudo docker run -d --network geo-loc-network -p 3000:80 geo-location-frontend:<tag>`
 
 ## Contributors
 
