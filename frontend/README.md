@@ -10,6 +10,8 @@ Highlights points belonging to the closest route when you click on a location.
 
 ## Usage
 
+NOTE: Use the same usage type for frontend and for backend!
+
 1. Clone the repository and position in the frontend folder.
 
 ### Local usage
@@ -19,11 +21,13 @@ Highlights points belonging to the closest route when you click on a location.
 
 ### Docker based usage
 
+NOTE: make sure to first start the backend!
+
 2. Make sure to [install docker](https://docs.docker.com/engine/install/)
 3. Build docker image
    - You can use: `sudo docker image build -t "geo-location-frontend:<tag>" .`
    - Or use the utility script `dockerize.sh`
-4. Run the docker image: `sudo docker run -d -p 3000:3000 geo-location-frontend:<tag>`
+4. Run the docker image: `sudo docker run -d --network geo-loc-network -p 3000:80 geo-location-frontend:<tag>`
 
 ## Contributors
 

@@ -17,6 +17,8 @@ Find Points In Viewport
 
 ## Usage
 
+NOTE: Use the same usage type for frontend and for backend!
+
 1. Clone the repository and position in the backend folder.
 
 ### Local usage
@@ -30,7 +32,7 @@ Find Points In Viewport
 3. Build docker image
    - You can use: `sudo docker image build -t "geo-location-backend:<tag>" .`
    - Or use the utility script `dockerize.sh`
-4. Run the docker image: `sudo docker run -d -p 5000:5000 geo-location-backend:<tag>`
+4. Run the docker image: `sudo docker run -d --network geo-loc-network -p 5000:5000 -e BASE_PATH=/api --hostname geo-location-backend geo-location-backend:<tag>`
 
 ## Contributors
 

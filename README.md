@@ -11,8 +11,11 @@ The backend provides geo location endpoints to find routes closest to a given lo
 
 ## Usage
 
-In [frontend](frontend/) you have detailed instructions for running the application frontend. 
 In [backend](backend/) you have detailed instructions for running the application backend. 
+In [frontend](frontend/) you have detailed instructions for running the application frontend. 
+If you use Docker, make sure to start the backend before the frontend. Otherwise the nginx server which serves the frontend and functions as a reverse proxy to the backend won't be able to find the backend.
+
+NOTE: Use the same usage type for frontend and for backend!
 
 If you decide to use docker, after building the images, you can run both frontend and backend using docker-compose:
 `sudo docker-compose up`
@@ -20,23 +23,23 @@ If you decide to use docker, after building the images, you can run both fronten
 ### Quick local guide
 
 1. Clone the repository
-2. Frontend
-   - `cd frontend/`
-   - `npm install`
-   - `npm start`
-3. Backend
-   - `cd ../backend/`
+2. Backend
+   - `cd backend/`
    - `npm install`
    - `node index.js`
+3. Frontend
+   - `cd ../frontend/`
+   - `npm install`
+   - `npm start`
 
 ### Quick docker guide
 
 1. Clone the repository
-2. Frontend
-   - `cd frontend/`
+2. Backend
+   - `cd backend/`
    - `dockerize.sh`
-3. Backend
-   - `cd ../backend/`
+3. Frontend
+   - `cd ../frontend/`
    - `dockerize.sh`
 4. Run at once:
    - `cd ..`
