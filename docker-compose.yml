@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+
+    geo-backend:
+        image: geo-location-backend:1.0.0
+        hostname: geo-location-backend
+        ports:
+           - "5000:5000"
+        environment:
+            BASE_PATH: /api
+        networks:
+            - local
+
+    geo-frontend:
+       image: geo-location-frontend:1.0.0
+       ports:
+           - "3000:80"
+       networks:
+           - local
+
+networks:
+  local:

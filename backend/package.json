@@ -1,0 +1,15 @@
+{
+  "name": "geo-location-api",
+  "version": "1.0.0",
+  "description": "An example API to demonstrate GeoLocation endpoints.",
+  "main": "src/index.js",
+  "author": "Petar Afrić",
+  "license": "ISC",
+  "dependencies": {
+    "@turf/turf": "^6.5.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  }
+}
